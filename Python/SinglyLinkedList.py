@@ -245,3 +245,7 @@ PrintList: O(N)
 Everything Else: O(1)
 
 """
+
+
+def test():
+    print("hello")

@@ -3,6 +3,9 @@ class Node:
         self.data=data
         self.next=None
 class LinkedList:
+    def test(self):
+        print("hello")
+        
     def __init__(self):
         self.size=1
         self.head=None

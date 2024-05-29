@@ -1,22 +1,30 @@
-import random
-PERIOD = 1000
-circle_coords = 0
-square_coords = 0
+from fastapi import FastAPI
+from starlette.responses import RedirectResponse
+from starlette.requests import Request
 
-# Count of Random number generated will be in [0,xVal * yVal]
-for i in range(PERIOD**2):
-   rand_x = random.uniform(-1,1)
-   rand_y = random.uniform(-1,1)
-   dist = rand_x**2 + rand_y**2
-   # Check if x & y inside the circle
-   if dist <= 1:
-      circle_coords += 1
-   square_coords += 1
-   pi = 4* circle_coords/square_coords
+app = FastAPI()
 
-print('Estimated Value of Pi using Monte Carlo is',pi)
-"""
-Final Estimation of Pi - 3.140484
-Time Complexity - O(PERIOD* 2^PERIOD)
-Space Complexity - O(1)
-"""
+CLIENT_ID = "60b1bda3790825235c9a"
+
+@app.get("/")
+async def github_login(request: Request):
+    a=1
+    while(a<10):
+        if a==5:
+            response = RedirectResponse(f'https://github.com/login/oauth/authorize?client_id={CLIENT_ID}&scope=repo%20read%3Auser')
+            await response(request)
+            print (1737)
+        else:
+            print(a)
+        a=a+1
+
+
+@app.get("/github")
+def test(code: str):
+    return code
+
+
+# Run the FastAPI application
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="localhost", port=8050)

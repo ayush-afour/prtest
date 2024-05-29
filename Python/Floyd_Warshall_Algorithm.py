@@ -3,6 +3,7 @@ class FloydWarshall:
     Implements : Floyd Warshall Algorithm
     Inputs     : Adjaceny Matrix (list of lists)
     Outputs    : Shortest distance between all pairs
+    Test
     """
 
     def __init__(self, adj_matrix):
