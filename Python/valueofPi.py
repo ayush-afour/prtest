@@ -4,7 +4,6 @@ from starlette.requests import Request
 
 app = FastAPI()
 
-CLIENT_ID = "60b1bda3790825235c9a"
 
 @app.get("/")
 async def github_login(request: Request):
