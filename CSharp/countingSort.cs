@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 
 public class countingSort
@@ -158,3 +158,54 @@ for integers, input 2 ");
     Space Complexity: O(n+k) 
 
  */
+
+
+// PalindromeChecker.cs
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            Console.WriteLine("Enter a string to check if it's a palindrome:");
+            string input = Console.ReadLine();
+
+            if (IsPalindrome(input))
+            {
+                Console.WriteLine($"'{input}' is a palindrome.");
+            }
+            else
+            {
+                Console.WriteLine($"'{input}' is not a palindrome.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occurred: " + ex.Message);
+        }
+    }
+
+    static bool IsPalindrome(string str)
+    {
+        if (string.IsNullOrEmpty(str))
+        {
+            return false;
+        }
+
+        int left = 0;
+        int right = str.Length - 1;
+
+        while (left < right)
+        {
+            if (char.ToLower(str[left]) != char.ToLower(str[right]))
+            {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+}
