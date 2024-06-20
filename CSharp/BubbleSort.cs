@@ -45,6 +45,7 @@ public static class Extensions
 		return result;
 	}
 }
+
 class Test
 {
     static void Main(string[] args)
