@@ -33,7 +33,9 @@ public class Program
 		var secondStringChars = secondString.ToLower().ToList();
 		firstStringChars.Sort();
 		secondStringChars.Sort();
-		return firstStringChars.SequenceEqual(secondStringChars);
+		var result = firstStringChars.SequenceEqual(secondStringChars);
+		Console.WriteLine($"First: {string.Join(",", firstStringChars)}, Second: {string.Join(",", secondStringChars)}, Result: {result}");
+		return result;
 	}
 	
 	public static void Main()

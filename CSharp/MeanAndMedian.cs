@@ -68,11 +68,4 @@ class Program
 		}
 	}
 
-	public static void Main(string[] args)
-	{
-		// Parses all arguments as doubles and makes an array out of them
-		double[] numbers = args.Select(Double.Parse).ToArray();
-		Console.WriteLine("Mean: " + Mean(numbers));
-		Console.WriteLine("Median: " + Median(numbers));
-	}
 }
