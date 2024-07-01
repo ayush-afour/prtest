@@ -11,6 +11,7 @@ class stack:
     #function to display elements of stack
     def display(self):
         print(self.mylist)
+        print("Test")
 
     #function to display length of stack
     def length(self):

@@ -26,6 +26,7 @@ while (x>1):
         flip(array, j)
         flip(array, x-1)
     x -= 1
+    print("hello")
     
 print("Sorted array is:")
 print(array)

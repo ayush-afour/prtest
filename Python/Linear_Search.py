@@ -36,3 +36,6 @@ Element found at 5 position
 
 
     
+class MyClass:
+    def do_something(self):
+        print("Hello, World!")
