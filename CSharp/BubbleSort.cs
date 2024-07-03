@@ -45,7 +45,52 @@ public static class Extensions
 		return result;
 	}
 }
+class Test
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            Console.WriteLine("Enter a number to check if it's prime:");
+            int number = int.Parse(Console.ReadLine());
 
+            if (IsPrime(number))
+            {
+                Console.WriteLine($"{number} is a prime number.");
+            }
+            else
+            {
+                Console.WriteLine($"{number} is not a prime number.");
+            }
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Please enter a valid integer.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occurred: " + ex.Message);
+        }
+    }
+
+    static bool IsPrime(int number)
+    {
+        if (number <= 1)
+        {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.Sqrt(number); i++)
+        {
+            if (number % i == 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
 /*
  Input used: 100, 67, 95, 34, 1, 82, 23, 56, 74, 48, 99
  
