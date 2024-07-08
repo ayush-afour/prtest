@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Linq;
 
 class Program
@@ -28,10 +28,7 @@ class Program
 	{
 		return numbers.Sum() / numbers.Length;
 	}
-  public static void Logger(string message)
-    {
-        Console.WriteLine($"[LOG] {DateTime.Now}: {message}");
-    }
+
 	/// <summary>
 	/// Takes one or more numbers, or an array of numbers, and returns their
 	/// median.
@@ -75,7 +72,6 @@ class Program
 	{
 		// Parses all arguments as doubles and makes an array out of them
 		double[] numbers = args.Select(Double.Parse).ToArray();
-		Logger("Calculating mean and median...");
 		Console.WriteLine("Mean: " + Mean(numbers));
 		Console.WriteLine("Median: " + Median(numbers));
 	}
