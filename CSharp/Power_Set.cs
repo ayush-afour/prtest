@@ -1,7 +1,7 @@
-﻿﻿using System;
+﻿using System;
 
 
-public class PowerSetGenerator
+public class Power_Set
 {
     // C# program for generating power set of a given set 
     public static void Generatepower_set(string set)
