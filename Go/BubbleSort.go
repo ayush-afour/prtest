@@ -10,20 +10,6 @@ import (
 /*
 Sorts an array of integers using the bubble sort algorithm
 */
-func sort(array []int) []int {
-	arrayLen := len(array)
-
-	for i := 0; i < arrayLen-1; i++ {
-		for j := 0; j < arrayLen-i-1; j++ {
-			if array[j] > array[j+1] {
-				// In this way it is possible to swap the values ​​without using a new variable
-				array[j], array[j+1] = array[j+1], array[j]
-			}
-		}
-	}
-
-	return array
-}
 
 func main() {
 	array := []int{}
