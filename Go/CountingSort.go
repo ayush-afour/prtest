@@ -5,12 +5,6 @@ import (
 	"math"
 )
 
-func main() {
-	// Input int array
-	array := []int{3, 82713871, 42, -123142, 35, 2, 12, -3, -4, -1, 3}
-	sortedArray := CountingSort(array)
-	fmt.Println(sortedArray)
-}
 
 /* 
 Implements Counting Sort on []int and returns sorted []int
