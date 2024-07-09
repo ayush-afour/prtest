@@ -8,6 +8,19 @@ import (
 	"strconv"
 )
 
+func search(array []int, elementToFind int) int {
+	low := 0
+	high := len(array) - 1
+
+	for low <= high {
+		// Find the middle index of array
+		index := int((low + high) >> 1)
+
+		// If find the element, return the position
+		if array[index] == elementToFind {
+			return index
+		}		
+}
 // Implementation of binary search without using recursion
 func search(array []int, elementToFind int) int {
 	low := 0
